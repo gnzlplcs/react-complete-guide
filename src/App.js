@@ -32,7 +32,7 @@ function App() {
         <ExpenseItem
           title={expense.title}
           amount={expense.amount}
-          date={expense.date.toISOString()}
+          date={expense.date}
           key={uuidv4()}
         />
       ))}
