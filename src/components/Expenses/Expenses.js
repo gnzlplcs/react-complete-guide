@@ -1,6 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import { v4 as uuidv4 } from "uuid";
-import expenses from "../data/expenses";
+import expenses from "../../data/expenses.js";
 import './Expenses.css';
 
 const Expenses = () => {
