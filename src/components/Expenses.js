@@ -6,7 +6,7 @@ import './Expenses.css';
 
 const Expenses = () => {
   return (
-    <>
+    <div className="expenses">
       {expenses.map((expense) => (
         <ExpenseItem
           title={expense.title}
@@ -15,7 +15,7 @@ const Expenses = () => {
           key={uuidv4()}
         />
       ))}
-    </>
+    </div>
   );
 };
 
