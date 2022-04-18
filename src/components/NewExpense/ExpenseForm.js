@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import "./ExpenseForm.css";
 
 const ExpenseForm = ({ onSaveExpenseData }) => {
@@ -25,8 +24,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate),
-      key: uuidv4(),
+      date: new Date(enteredDate)
     };
 
     onSaveExpenseData(expenseData);
