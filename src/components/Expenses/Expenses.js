@@ -4,11 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpenseItem from "./ExpenseItem";
-
-import expenses from "../../data/expenses.js";
 import "./Expenses.css";
 
-const Expenses = () => {
+const Expenses = ({ items }) => {
   const [filteredYear, setFilteredYear] = useState("2022");
 
   const selectedYearHandler = (selectedYear) => {
@@ -20,7 +18,7 @@ const Expenses = () => {
         onFilterYear={selectedYearHandler}
         selected={filteredYear}
       />
-      {expenses.map((expense) => (
+      {items.map((expense) => (
         <ExpenseItem
           title={expense.title}
           amount={expense.amount}
